@@ -18,7 +18,7 @@ import { useCallback } from 'react';
 import { useRoute } from '@react-navigation/native';
 import { useEffect } from 'react';
 
-const GEMINI_API_KEY = 'AIzaSyDmCbvogZuUG0L_AHTaiLxRjCHhGuDa15s';
+const GEMINI_API_KEY = process.env.EXPO_PUBLIC_GEMINI_API_KEY;
 
 export default function GammyScreen() {
   const route = useRoute();
@@ -76,7 +76,7 @@ export default function GammyScreen() {
 
         try {
           const apiResponse = await fetch(
-            `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=${GEMINI_API_KEY}`,
+            `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash-lite:generateContent?key=${GEMINI_API_KEY}`,
             {
               method: 'POST',
               headers: {
@@ -132,7 +132,7 @@ Give practical gameplay tips and strategies. IMPORTANT: Your response must be EX
 
     try {
       const apiResponse = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=${GEMINI_API_KEY}`,
+        `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash-lite:generateContent?key=${GEMINI_API_KEY}`,
         {
           method: 'POST',
           headers: {
@@ -301,7 +301,7 @@ Give practical gameplay tips and strategies. IMPORTANT: Your response must be EX
                 onPress={requestAlternative}
               >
                 <Text style={styles.alternativeText}>
-                  Request an alternative strategy
+                  Request an another strategy
                 </Text>
               </TouchableOpacity>
             </>
