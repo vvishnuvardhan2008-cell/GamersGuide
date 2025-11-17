@@ -1,22 +1,20 @@
-import React, { useState } from 'react';
+import { Ionicons } from '@expo/vector-icons';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useFocusEffect, useNavigation } from '@react-navigation/native';
+import React, { useCallback, useState } from 'react';
 import {
-  View,
+  Alert,
+  Dimensions,
+  Image,
+  Platform,
+  ScrollView,
+  StyleSheet,
   Text,
   TextInput,
   TouchableOpacity,
-  StyleSheet,
-  ScrollView,
-  Image,
-  Platform,
-  Dimensions,
-  Alert
+  View
 } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
 import { auth } from '../../config/firebase';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useFocusEffect } from '@react-navigation/native';
-import { useCallback } from 'react';
-import { useNavigation } from '@react-navigation/native';
 
 const { width } = Dimensions.get('window');
 const GAME_CARD_SIZE = (width - 60) / 3;
