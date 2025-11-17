@@ -43,7 +43,7 @@ const GAME_IMAGES: Record<string, any> = {
 const GUIDE_IMAGES: Record<string, any> = {
   'How to beat Malenia': require('../../assets/games/malenia.jpg'),
   'Beginner Midlane Tips': require('../../assets/games/midlane.jpg'),
-  'Best Strength Builds' : require('../../assets/games/builds.jpg'),
+  'How to Make Strength Builds' : require('../../assets/games/builds.jpg'),
   'Renger Guide': require('../../assets/games/renger.jpg'),
   'Tank Rundown': require('../../assets/games/ow.jpg'),
   // fallback if a guide title isn’t in the map
