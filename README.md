@@ -4,6 +4,7 @@ To run this project locally, you will need to provide your own Google Gemini API
 
 ### 1. Clone the repository
 git clone <your-repo-link>
+
 cd GamersGuide
 
 ### 2. Install dependencies
