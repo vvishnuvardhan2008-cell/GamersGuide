@@ -7,7 +7,33 @@ git clone <your-repo-link>
 cd GamersGuide
 
 ### 2. Install dependencies
-npm install
+npm install 
+npm install --save-dev typescript @types/react @types/react-native
+
+### 4. Replace the work in tsconfig.json with the following:
+
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": false,
+    "jsx": "react-native",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "noEmit": true
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
 
 ### 3. Set up your environment variables
 1.  Create a new file in the root of the project named `.env`
